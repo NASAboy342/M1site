@@ -1,0 +1,68 @@
+﻿:root{
+    --primary-color: rgb(255, 255, 255);
+    --normal-text: rgb(136, 136, 136);
+    --Important-text: rgb(0, 127, 177);
+    --hovered-normal-text: var(--Important-text);
+    --hovered-important-text: rgb(0, 162, 226);
+    --background-color: rgb(211, 224, 230);
+    --hovered-background-color: var(--Important-text);
+    --active-color: rgb(0, 99, 138);
+
+    --normal-text-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    --shadows: 0px 5px 10px rgba(0, 0, 0, 0.247);
+
+    --border-radius: 10px;
+}
+body {
+    font-family: var(--normal-text-font);
+    background-color: var(--background-color);
+    color: var(--normal-text);
+}
+a {
+    text-decoration: none;
+    color: var(--normal-text);
+}
+.body{
+    display: flex;
+    flex-direction:row;
+    gap: 5px;
+    width: 100%;
+    height: 100vh;
+}
+.body div{
+    border-radius: var(--border-radius);
+    padding: 5px;
+}
+.Nav{
+    background-color: var(--primary-color);
+    box-shadow: var(--shadows);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 15%;
+}
+.Nav-Item{
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+.Nav-Item:hover{
+    color: var(--hovered-normal-text);
+}
+.Nav-Item:active{
+    color: var(--active-color);
+}
+
+.render{
+    width: 85%;
+}
+
+.top-label{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    width: 90%;
+    color: var(--Important-text);
+    box-shadow: var(--shadows);
+    text-align: center;
+    font-size: x-large;
+}

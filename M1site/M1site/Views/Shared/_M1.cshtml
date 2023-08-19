@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/M1/m1.css" />
+</head>
+<body>
+    <div class="body">
+        <div class="Nav">
+            <a class="Nav-Item" asp-area="" asp-controller="M1" asp-action="Index">Home</a>
+            <a class="Nav-Item" asp-area="" asp-controller="M1" asp-action="Stock">Stock</a>
+        </div>
+        <div class="render">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
