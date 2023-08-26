@@ -124,6 +124,63 @@ a {
     color: var(--Important-text);
 }
 
+.feature-bar{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stock-in-pop{
+    display: none;
+    position: fixed;
+    backdrop-filter: blur(3px);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.stock-in-pop > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadows);
+    width: 50%;
+    height: 50%;
+}
+.pop-up input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid var(--normal-text);
+    border-radius: var(--border-radius);
+}
+.pop-up h2,h3{
+    color: var(--Important-text);
+}
+
+.feature-bar > button{
+    background-color: var(--important-background-color);
+    box-shadow: var(--shadows);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--tex-in-important-background);
+}
+.feature-bar > button:hover{
+    background-color: var(--hovered-important-text);
+}
+.feature-bar > button:active{
+    background-color: var(--active-color);
+}
+
 .search-bar{
     background-color: var(--primary-color);
     box-shadow: var(--shadows);
@@ -134,12 +191,6 @@ a {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
-}
-.search-bar > input{
-    border: none;
-    border-radius: var(--border-radius);
-    width: 70%;
-    color: var(--normal-text);
 }
 .search-bar > button{
     background-color: var(--important-background-color);
@@ -153,6 +204,13 @@ a {
 .search-bar > button:active{
     background-color: var(--active-color);
 }
+.search-bar > input{
+    border: none;
+    border-radius: var(--border-radius);
+    width: 70%;
+    color: var(--normal-text);
+}
+
 
 .stock-conten{
     display: flex;
@@ -164,6 +222,7 @@ a {
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     border-collapse: collapse;
+    box-shadow: var(--shadows);
 }
 .stock-data-grid th{
     background-color: var(--important-background-color);
@@ -182,6 +241,8 @@ a {
     color: var(--tex-in-important-background);
     border: none;
     border-radius: var(--border-radius);
+    
+    height: 30px;
 }
 .button:hover{
     background-color: var(--hovered-important-text);
@@ -189,3 +250,6 @@ a {
 .button:active{
     background-color: var(--active-color);
 }
+
+
+  

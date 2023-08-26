@@ -4,15 +4,56 @@
 }
 <div class="top-label">Stock</div>
 <div class="stock-conten">
+    <div class="stock-in-pop" id="stock-in-pop">
+        <div>
+            <div class="pop-up">
+                <div><h2>Stock-in</h2></div>
+                <table>
+                    <tr>
+                        <th><h3>Image</h3></th>
+                        <th><input type="image" /></th>
+                    </tr>
+                    <tr>
+                        <th><h3>ItemName</h3></th>
+                        <th><input type="text" /></th>
+                    </tr>
+                    <tr>
+                        <th><h3>Quantity</h3></th>
+                        <th><input type="number" /></th>
+                    </tr>
+                    <tr>
+                        <th><h3>Unit</h3></th>
+                        <th><input type="text" /></th>
+                    </tr>
+                </table>
+                <div>
+                    <button class="button" onclick="">Add</button>
+                    <button class="button" onclick="ClosePopUp('stock-in-pop')">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stock-in-pop" id="refill-pop">
+        <div>
+            <div class="pop-up">
+                This is a pop-up screen for refill
+                <button class="button" onclick="ClosePopUp('refill-pop')">Close</button>
+            </div>
+        </div>
+    </div>
     <div class="feature-bar">
+        <div class="svg-icon"></div>
         <form class="search-bar">
             <input type="text" id="search-text" />
             <button type="button">Search</button>
         </form>
+        <button type="button" onclick="LoadUpPopUp('stock-in-pop')">Stock-in</button>
+        <button type="button" onclick="LoadUpPopUp('refill-pop')">Refill</button>
     </div>
     <table class="stock-data-grid">
         <tr class="stock-data-grid-th">
             <th>Id</th>
+            <th>Image</th>
             <th>ItemName</th>
             <th>Quantity</th>
             <th>Unit</th>
@@ -20,6 +61,7 @@
         </tr>
         <tr>
             <td>1</td>
+            <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
             <td>Apple</td>
             <td>12</td>
             <td>PCS</td>
@@ -27,6 +69,7 @@
         </tr>
         <tr>
             <td>2</td>
+            <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
             <td>Banana</td>
             <td>12</td>
             <td>PCS</td>
@@ -34,6 +77,7 @@
         </tr>
         <tr>
             <td>3</td>
+            <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
             <td>Potato</td>
             <td>12</td>
             <td>PCS</td>
@@ -41,3 +85,16 @@
         </tr>
     </table>
 </div>
+
+<script>
+
+    function LoadUpPopUp(id){
+        var div = document.getElementById(id);
+        div.style.display = "block";
+    }
+    function ClosePopUp(id) {
+        var div = document.getElementById(id);
+        div.style.display = "none";
+    }
+
+</script>
