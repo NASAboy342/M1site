@@ -5,8 +5,13 @@
     --hovered-normal-text: var(--Important-text);
     --hovered-important-text: rgb(0, 162, 226);
     --background-color: rgb(211, 224, 230);
+    --important-background-color: var(--Important-text);
+    --tex-in-important-background: white;
     --hovered-background-color: var(--Important-text);
     --active-color: rgb(0, 99, 138);
+    --positive-color: rgb(0, 255, 0);
+    --nagetive-color: red;
+    --table-odd-color: rgb(220, 234, 238);
 
     --normal-text-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -65,4 +70,122 @@ a {
     box-shadow: var(--shadows);
     text-align: center;
     font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.conten{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.positive-indicator-bar{
+    height: 5px;
+    background-color: var(--positive-color);
+}
+
+.invoices{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadows);
+    width: 20%;
+}
+.invoices > h1{
+    color: var(--Important-text);
+}
+
+.total-income{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadows);
+    width: 20%;
+}
+.total-income > h1{
+    color: var(--Important-text);
+}
+
+.total-spend{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadows);
+    width: 20%;
+}
+.total-spend > h1{
+    color: var(--Important-text);
+}
+
+.total-profit{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadows);
+    width: 20%;
+}
+.total-profit > h1{
+    color: var(--Important-text);
+}
+
+.search-bar{
+    background-color: var(--primary-color);
+    box-shadow: var(--shadows);
+    width: 30%;
+    height: 30px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.search-bar > input{
+    border: none;
+    border-radius: var(--border-radius);
+    width: 70%;
+    color: var(--normal-text);
+}
+.search-bar > button{
+    background-color: var(--important-background-color);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--tex-in-important-background);
+}
+.search-bar > button:hover{
+    background-color: var(--hovered-important-text);
+}
+.search-bar > button:active{
+    background-color: var(--active-color);
+}
+
+.stock-conten{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stock-data-grid{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    border-collapse: collapse;
+}
+.stock-data-grid th{
+    background-color: var(--important-background-color);
+    color: var(--tex-in-important-background);
+    border-radius: var(--border-radius);
+}
+.stock-data-grid td{
+    text-align: center;
+}
+.stock-data-grid tr:nth-child(odd){
+    background-color: var(--table-odd-color);
+}
+
+.button{
+    background-color: var(--important-background-color);
+    color: var(--tex-in-important-background);
+    border: none;
+    border-radius: var(--border-radius);
+}
+.button:hover{
+    background-color: var(--hovered-important-text);
+}
+.button:active{
+    background-color: var(--active-color);
 }
