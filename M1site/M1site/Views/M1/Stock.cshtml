@@ -3,7 +3,7 @@
     Layout = "_M1";
 }
 <div class="top-label">Stock</div>
-<div class="stock-conten">
+<div class="stock-conten" onload="GetItems()">
     <div class="stock-in-pop" id="stock-in-pop">
         <div>
             <div class="pop-up">
@@ -50,7 +50,7 @@
         <button type="button" onclick="LoadUpPopUp('stock-in-pop')">Stock-in</button>
         <button type="button" onclick="LoadUpPopUp('refill-pop')">Refill</button>
     </div>
-    <table class="stock-data-grid">
+    <table class="stock-data-grid" id="stock-data-grid">
         <tr class="stock-data-grid-th">
             <th>Id</th>
             <th>Image</th>
@@ -65,7 +65,7 @@
             <td>Apple</td>
             <td>12</td>
             <td>PCS</td>
-            <td><button class="button">Edit</button></td>
+            <td><button class="button" onclick="">Edit</button></td>
         </tr>
         <tr>
             <td>2</td>
@@ -87,6 +87,21 @@
 </div>
 
 <script>
+    //----------Models--------------------
+
+    var items = {
+        errorCode: 0,
+        errorMessage: "",
+        data: [
+            {
+                itemsName: "",
+                quantity: 0,
+                unit: ""
+            }
+        ]
+    }
+
+    //----------Methods-------------------
 
     function LoadUpPopUp(id){
         var div = document.getElementById(id);
@@ -95,6 +110,49 @@
     function ClosePopUp(id) {
         var div = document.getElementById(id);
         div.style.display = "none";
+    }
+
+    async function GetItems(){
+        var endPoint = "/Data/m1-get-Items";
+        items = await Fetch(endPoint);
+        alert(items.data[2].itemsName);
+    }
+
+    //----------Common-------------
+
+    function Fetch(endPoint, request) {
+
+        fetch(endPoint,{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;"
+            },
+            body: JSON.stringify(request)
+        })
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                else {
+                    alert("Data access error!");
+                }
+            })
+    }
+    function Fetch(endPoint) {
+        return fetch(endPoint, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;"
+            },
+        })
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                else {
+                    alert("Data access error!");
+                }
+            })
     }
 
 </script>
