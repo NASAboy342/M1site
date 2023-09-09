@@ -2,92 +2,92 @@
 @{
     Layout = "_M1";
 }
-<div class="top-label">Stock</div>
-<script>
-    GetItems();
-</script>
-<div class="stock-conten">
-    <div class="stock-in-pop" id="stock-in-pop">
-        <div>
-            <div class="pop-up">
-                <div><h2>Stock-in</h2></div>
-                <table>
-                    <tr>
-                        <th><h3>Image</h3></th>
-                        <th><input type="image" /></th>
-                    </tr>
-                    <tr>
-                        <th><h3>ItemName</h3></th>
-                        <th><input type="text" /></th>
-                    </tr>
-                    <tr>
-                        <th><h3>Quantity</h3></th>
-                        <th><input type="number" /></th>
-                    </tr>
-                    <tr>
-                        <th><h3>Unit</h3></th>
-                        <th><input type="text" /></th>
-                    </tr>
-                </table>
-                <div>
-                    <button class="button" onclick="">Add</button>
-                    <button class="button" onclick="ClosePopUp('stock-in-pop')">Close</button>
+<body onload="GetItems()">
+    <img class="none" onload="GetItems()" />
+    <div class="top-label">Stock</div>
+    <div class="stock-conten">
+        <div class="stock-in-pop" id="stock-in-pop">
+            <div>
+                <div class="pop-up">
+                    <div><h2>Stock-in</h2></div>
+                    <table>
+                        <tr>
+                            <th><h3>Image</h3></th>
+                            <th><input type="image" /></th>
+                        </tr>
+                        <tr>
+                            <th><h3>ItemName</h3></th>
+                            <th><input type="text" /></th>
+                        </tr>
+                        <tr>
+                            <th><h3>Quantity</h3></th>
+                            <th><input type="number" /></th>
+                        </tr>
+                        <tr>
+                            <th><h3>Unit</h3></th>
+                            <th><input type="text" /></th>
+                        </tr>
+                    </table>
+                    <div>
+                        <button class="button" onclick="">Add</button>
+                        <button class="button" onclick="ClosePopUp('stock-in-pop')">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="stock-in-pop" id="refill-pop">
-        <div>
-            <div class="pop-up">
-                This is a pop-up screen for refill
-                <button class="button" onclick="ClosePopUp('refill-pop')">Close</button>
+        <div class="stock-in-pop" id="refill-pop">
+            <div>
+                <div class="pop-up">
+                    This is a pop-up screen for refill
+                    <button class="button" onclick="ClosePopUp('refill-pop')">Close</button>
+                </div>
             </div>
         </div>
+        <div class="feature-bar">
+            <div class="svg-icon"></div>
+            <form class="search-bar">
+                <input type="text" id="search-text" />
+                <button type="button">Search</button>
+            </form>
+            <button type="button" onclick="LoadUpPopUp('stock-in-pop')">Stock-in</button>
+            <button type="button" onclick="LoadUpPopUp('refill-pop')">Refill</button>
+        </div>
+        <table class="stock-data-grid" id="stock-data-grid">
+            <tr class="stock-data-grid-th">
+                <th>Id</th>
+                <th>Image</th>
+                <th>ItemName</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Option</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
+                <td>Apple</td>
+                <td>12</td>
+                <td>PCS</td>
+                <td><button class="button" onclick="">Edit</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
+                <td>Banana</td>
+                <td>12</td>
+                <td>PCS</td>
+                <td><button class="button">Edit</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
+                <td>Potato</td>
+                <td>12</td>
+                <td>PCS</td>
+                <td><button class="button">Edit</button></td>
+            </tr>
+        </table>
     </div>
-    <div class="feature-bar">
-        <div class="svg-icon"></div>
-        <form class="search-bar">
-            <input type="text" id="search-text" />
-            <button type="button">Search</button>
-        </form>
-        <button type="button" onclick="LoadUpPopUp('stock-in-pop')">Stock-in</button>
-        <button type="button" onclick="LoadUpPopUp('refill-pop')">Refill</button>
-    </div>
-    <table class="stock-data-grid" id="stock-data-grid">
-        <tr class="stock-data-grid-th">
-            <th>Id</th>
-            <th>Image</th>
-            <th>ItemName</th>
-            <th>Quantity</th>
-            <th>Unit</th>
-            <th>Option</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
-            <td>Apple</td>
-            <td>12</td>
-            <td>PCS</td>
-            <td><button class="button" onclick="">Edit</button></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
-            <td>Banana</td>
-            <td>12</td>
-            <td>PCS</td>
-            <td><button class="button">Edit</button></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><img src="https://conagen.com/wp-content/uploads/2019/08/Food-Ingredients.jpg" height="50px" /></td>
-            <td>Potato</td>
-            <td>12</td>
-            <td>PCS</td>
-            <td><button class="button">Edit</button></td>
-        </tr>
-    </table>
-</div>
+</body>
 
 <script>
     //----------Models--------------------
@@ -115,10 +115,52 @@
         div.style.display = "none";
     }
 
+    function ClearStockDataGrid(){
+        var stockDataGrid = document.getElementById("stock-data-grid");
+        for (var i = stockDataGrid.rows.length - 1; i >= 1; i--){
+            stockDataGrid.deleteRow(i);
+        }
+    }
+
     async function GetItems(){
+        ClearStockDataGrid();
         var endPoint = "/Data/m1-get-Items";
         items = await Fetch(endPoint);
-        alert(items.data[2].itemsName);
+        var stockDataGrid = document.getElementById("stock-data-grid");
+        for (var i = 0; i <= items.data.length - 1; i++){
+            var tr = document.createElement("tr");
+
+            var tdId = document.createElement("td");
+            var tdImage = document.createElement("td");
+            var tdItemName = document.createElement("td");
+            var tdQuantity = document.createElement("td");
+            var tdUnit = document.createElement("td");
+            var tdOption = document.createElement("td");
+
+
+            var tId = document.createTextNode(i + 1);
+            var tItemName = document.createTextNode(items.data[i].itemsName);
+            var tQuantity = document.createTextNode(items.data[i].quantity);
+            var tUnit = document.createTextNode(items.data[i].unit);
+            var editButton = document.createElement("button");
+            editButton.classList = "button";
+            editButton.value = items.data[i].itemsName;
+            editButton.appendChild(document.createTextNode("Edit"));
+
+            tdId.appendChild(tId);
+            tdItemName.appendChild(tItemName);
+            tdQuantity.appendChild(tQuantity);
+            tdUnit.appendChild(tUnit);
+            tdOption.appendChild(editButton);
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdImage);
+            tr.appendChild(tdItemName);
+            tr.appendChild(tdQuantity);
+            tr.appendChild(tdUnit);
+            tr.appendChild(tdOption);
+            stockDataGrid.appendChild(tr);
+        }
     }
 
     //----------Common-------------

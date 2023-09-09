@@ -28,6 +28,11 @@ a {
     text-decoration: none;
     color: var(--normal-text);
 }
+.none{
+    display: block;
+    height: 0;
+    width: 0;
+}
 .body{
     display: flex;
     flex-direction:row;
